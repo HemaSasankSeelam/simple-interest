@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-image: conic-gradient(from 45deg, lightgreen, lightpink, lightgray, lightcyan, lightgoldenrodyellow, lightgray);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#main-heading {
+    font-style: italic;
+    font-weight: 700;
+    text-decoration: underline;
+    text-decoration-color: aqua;
+    text-transform: capitalize;
+}
+
+
+#si-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 3px;
+    width: 30%;
+    padding: 5px;
+
+    box-shadow: 5px 5px 5px black;
+    background-color: transparent;
+    border: 1px solid black;
+    backdrop-filter: blur(10px);
+}
+
+
+input {
+    text-align: center;
+}
+
+@media screen and (max-width:1200px) {
+    #si-form {
+        width: 90%;
+    }
+}

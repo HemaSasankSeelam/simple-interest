@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Interest</title>
+
+    <link href="libs/daisyui@5.css" rel="stylesheet" type="text/css" />
+    <link href="libs/daisyui-themes.css" rel="stylesheet" type="text/css" />
+
+    <!-- Tailwind (browser build) -->
+    <script src="libs/tailwind-browser@4.js"></script>
+
+    <!-- Day.js -->
+    <script src="libs/dayjs.min.js"></script>
+
+
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+    <!-- Open the modal using ID.showModal() method -->
+    <dialog id="my_modal_2" class="modal">
+        <div class="modal-box">
+            <p id="info"></p>
+        </div>
+        <form method="dialog" class="modal-backdrop">
+            <button>close</button>
+        </form>
+    </dialog>
+
+    <form id="si-form">
+        <h4 id="main-heading">Simple interest</h4>
+        <label class="input">
+            <span class="label">Given date</span>
+            <input type="date" id="given-date" required />
+        </label>
+        <label class="input">
+            <span class="label">Return date</span>
+            <input type="date" id="return-date" required />
+        </label>
+        <hr>
+        <label class="floating-label input">
+            <span>Enter Amount</span>
+            <input type="tel" id="amount" placeholder="Enter Amount" class="input input-md" required
+                onkeyup="checkIsNumber(this)" autocomplete="off" />
+        </label>
+        <hr>
+        <label class="floating-label input">
+            <span>Enter Interest Rate</span>
+            <input type="tel" id="interest" placeholder="Enter Interest Rate" class="input" required
+                onkeyup="checkIsNumber(this)" autocomplete="off" />
+        </label>
+
+        <br><br>
+        <button class="btn btn-wide">submit</button>
+    </form>
+
+
+    <script src="./index.js"></script>
+</body>
+
+</html>
