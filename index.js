@@ -1,5 +1,5 @@
 
-let givenDateEle = document.getElementById("given-date");
+let takenDateEle = document.getElementById("taken-date");
 let returnDateEle = document.getElementById("return-date");
 let amountEle = document.getElementById("amount");
 let interestEle = document.getElementById("interest");
@@ -43,17 +43,17 @@ function convertToIndFormat(amount) {
 document.getElementById("si-form").addEventListener("submit", (ev) => {
     ev.preventDefault();
 
-    let givenDayJs = dayjs(givenDateEle.value);
+    let takenDayJss = dayjs(takenDateEle.value);
     let returnDayJs = dayjs(returnDateEle.value);
 
-    if (givenDayJs > returnDayJs) {
+    if (takenDayJss > returnDayJs) {
         alert("return date Must be greater the given date");
         return;
     }
 
-    let year1 = givenDayJs.year();
-    let month1 = givenDayJs.month();
-    let day1 = givenDayJs.date();
+    let year1 = takenDayJss.year();
+    let month1 = takenDayJss.month();
+    let day1 = takenDayJss.date();
 
     let year2 = returnDayJs.year();
     let month2 = returnDayJs.month();
@@ -81,7 +81,7 @@ document.getElementById("si-form").addEventListener("submit", (ev) => {
 
     modalInfoEle.innerHTML = ""; // clearing the previous ones
     modalInfoEle.innerHTML += `
-    ${returnDayJs.format("DD/MM/YYYY")} - ${givenDayJs.format("DD/MM/YYYY")}
+    ${returnDayJs.format("DD/MM/YYYY")} - ${takenDayJss.format("DD/MM/YYYY")}
     <br>
     Total Days: ${totalDays}
     <br>
